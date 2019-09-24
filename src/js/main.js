@@ -1,3 +1,3 @@
 $('#menu-toggler').click(function () {
-    $('.header-wrapper .menu').toggle(300);
+    $('.header-wrapper .menu').toggle();
 })
