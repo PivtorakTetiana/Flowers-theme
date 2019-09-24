@@ -1,0 +1,396 @@
+$hover-link-color: rgb(150, 113, 127);
+$hover-link-text-shadow:0px 0px 1px rgba(151, 97, 118, 0.5);
+$content-line-height: 1.5;
+$content-text-align: justify;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    background-image: url(../img/pexels-photo-2512280.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .main-bg-color {
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #457188;
+        font-size: 25px;
+
+        img {
+            max-width: 100%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        transition-duration: .4s;
+
+        .menu-item {
+            font-size: 20px;
+
+            &::before {
+                content: "|";
+                font-size: 20px;
+            }
+
+            &::after {
+                content: "|";
+                font-size: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #2a373e;
+                transition-duration: .3s;
+
+                &:hover {
+                    color: $hover-link-color;
+                    text-shadow: $hover-link-text-shadow;
+                }
+            }
+        }
+    }
+
+    .mobile-menu-toggler {
+        display: none;
+    }
+}
+
+.animate-wrapper {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(-45deg, rgba(230, 180, 219, 0.5), rgba(218, 161, 183, 0.5), rgba(143, 184, 199, 0.5), rgba(135, 196, 180, 0.5));
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.start-info-wrapper {
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 2px rgba(15, 6, 4, 0.5);
+
+    .title {
+        color: #ffffff;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 27px;
+    }
+}
+
+.main-info {
+    p {
+        line-height: $content-line-height;
+        text-align: $content-text-align;
+    }
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .gallery-item {
+        max-width: 100%;
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        margin: 20px auto;
+    }
+}
+
+.end-info {
+    p {
+        line-height: $content-line-height;
+        text-align: $content-text-align;
+    }
+}
+
+.odds-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .odd-item {
+        text-align: center;
+        padding: 15px 0;
+
+        .odd-item-bg {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(rgba(230, 180, 219, 0.4), rgba(218, 161, 183, 0.2), rgba(143, 184, 199, 0.4), rgba(135, 196, 180, 0.2));
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 15px 0;
+            background-size: 200% 300%;
+            animation: gradientBG 10s ease infinite;
+
+            img {
+                width: 80px;
+                height: 80px;
+                align-self: center;
+            }
+        }
+
+        .odd-item-descriotion {
+            font-size: 20px;
+            color: #457188;
+        }
+    }
+}
+
+footer {
+    .footer-wrapper {
+        background-color: #606d73;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .contacts-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                margin: 15px;
+            }
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 45%;
+
+            li {
+                &::before {
+                    content: "|";
+                    font-size: 20px;
+                    color: #ffffff;
+                }
+
+                &::after {
+                    content: "|";
+                    font-size: 20px;
+                    color: #ffffff;
+                }
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background-color: #eeeeee;
+        padding: 10px;
+        text-align: center;
+        color: #457188;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-wrapper {
+        .logo {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 957px) {
+    .header-wrapper {
+        .logo {
+            width: 95%;
+            justify-content: center;
+        }
+
+        .menu {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 717px) {
+    .animate-wrapper {
+        height: 280px;
+
+        .start-info-wrapper {
+            .title {
+                font-size: 35px;
+            }
+
+            .description {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .odds-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header-wrapper {
+        position: relative;
+
+        .logo {
+            margin-top: 35px;
+        }
+
+        .menu {
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            display: none;
+            top: 55px;
+            left: 0;
+            background-image: url(../img/pexels-photo-2512280.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding: 0;
+            width: 100%;
+
+
+            .menu-item {
+                font-size: 23px;
+                padding: 26px 30px;
+
+                &::before {
+                    content: "";
+                }
+
+                &::after {
+                    content: "";
+                }
+            }
+        }
+
+        .mobile-menu-toggler {
+            display: block;
+            width: 55px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .start-info {
+        .animate-wrapper {
+            height: 250px;
+
+            .start-info-wrapper {
+                padding: 20px;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .start-info {
+        .animate-wrapper {
+            height: 335px;
+
+        }
+    }
+
+    .header-wrapper {
+        .logo {
+            flex-direction: column;
+
+            img {
+                width: 200px;
+            }
+        }
+
+        .menu {
+            min-height: 550px;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .animate-wrapper {
+        .start-info-wrapper {
+            .description {
+                font-size: 18px;
+            }
+        }
+    }
+    footer {
+        .footer-wrapper {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .menu {
+                justify-content: flex-start;
+                width: 85%;
+            }
+        }
+    }
+}
